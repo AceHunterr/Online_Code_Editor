@@ -6,25 +6,26 @@
     </head>
     <body>
         <div class="editor">
-            <textarea name="" id="html-code"></textarea>
-            <textarea name="" id="css-code"></textarea>
-            <textarea name="" id="js-code"></textarea>
+            <h3>HTML</h3>
+            <textarea name="" id="html-code" placeholder="Enter your HTML code here ..." rows="10" cols="50"><button onclick="showAlert()">Hello</button></textarea>
+            <br>
+            
+            <h3>CSS</h3>
+            <textarea name="" id="css-code" placeholder="Enter your CSS code here ..." rows="10" cols="50">button{background-color:red; color:yellow;}
+
+            </textarea>
+            <br>
+
+            <h3>JS</h3>
+            <textarea name="" id="js-code" placeholder="Enter your JS code here ..." rows="10" cols="50">function showAlert() {
+                alert ("Hello world!");
+              }</textarea>
+            <br>
+
+            <h3>OUPUT</h3>
             <iframe id="output"></iframe>
-        </div>
+        </div>  
 
-        <script type="text/javascript">
-            function run() {
-                let htmlCode = document.querySelector(".editor #html-code").value;
-                let cssCode = "<style>"+document.querySelector(".editor #css-code").value+"</style>";
-                let jsCode = document.querySelector(".editor #js-code").value;
-                let output = document.querySelector(".editor #output");
-
-                output.contentDocument.body.innerHTML = htmlCode+cssCode;
-                output.contentWindow.eval(jsCode);
-            }
-            document.querySelector(".editor #html-code").addEventListener("keyup",run);
-            document.querySelector(".editor #css-code").addEventListener("keyup",run);
-            document.querySelector(".editor #js-code").addEventListener("keyup",run);
-        </script>
+    <script src="index.js"></script>
     </body>
 </html>
